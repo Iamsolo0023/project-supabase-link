@@ -8,24 +8,24 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern real estate color palette */
-    --primary: 35 90% 55%;  /* Golden */
-    --primary-glow: 35 90% 65%;
+    /* Modern real estate color palette with gold primary */
+    --primary: 42 61% 58%;  /* Gold #d1a954 */
+    --primary-glow: 42 61% 68%;
     --primary-foreground: 0 0% 98%;
     --secondary: 220 25% 25%;  /* Dark blue-gray */
-    --accent: 45 95% 60%;  /* Bright gold */
+    --accent: 42 61% 58%;  /* Gold accent */
     --gold: 42 61% 58%;  /* Custom gold #d1a954 */
     
-    /* Real estate gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(35 90% 55%), hsl(45 95% 60%));
+    /* Real estate gradients with gold */
+    --gradient-primary: linear-gradient(135deg, hsl(42 61% 58%), hsl(42 61% 68%));
     --gradient-hero: linear-gradient(135deg, hsl(220 25% 15%) 0%, hsl(220 20% 25%) 100%);
     --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
     --gradient-overlay: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
     
-    /* Enhanced shadows */
+    /* Enhanced shadows with gold glow */
     --shadow-elegant: 0 10px 30px -10px hsl(220 25% 25% / 0.3);
     --shadow-card: 0 8px 32px -8px hsl(220 25% 25% / 0.2);
-    --shadow-glow: 0 0 40px hsl(35 90% 55% / 0.3);
+    --shadow-glow: 0 0 40px hsl(42 61% 58% / 0.3);
     
     /* Smooth transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -39,8 +39,6 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -48,8 +46,6 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -87,8 +83,8 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 42 61% 58%;  /* Gold in dark mode */
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -96,8 +92,8 @@ All colors MUST be HSL.
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 42 61% 58%;  /* Gold accent in dark mode */
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
