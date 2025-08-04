@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Users, Building, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Award, Users, Building, Heart, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const values = [
@@ -87,11 +89,17 @@ const About = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
               Our Mission
             </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               "To create exceptional living and working spaces that enhance the quality of life for our customers, 
               while maintaining the highest standards of design, construction, and customer service. We are committed 
               to building sustainable communities that stand the test of time."
             </p>
+            <Link to="/founder">
+              <Button className="group">
+                Meet Our Founder
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
