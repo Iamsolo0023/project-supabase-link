@@ -32,7 +32,7 @@ const About = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
-          <div className="animate-fade-in">
+          <div className="animate-bounce-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               About <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Shridhar Developers</span>
             </h2>
@@ -48,11 +48,11 @@ const About = () => {
             
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6 mb-8">
-              <div className="text-center p-4 bg-card rounded-lg border border-border/20">
+              <div className="text-center p-4 bg-card rounded-lg border border-border/20 hover-lift">
                 <div className="text-3xl font-bold text-primary mb-2">180+</div>
                 <div className="text-sm text-muted-foreground">Million Sq. Ft. Delivered</div>
               </div>
-              <div className="text-center p-4 bg-card rounded-lg border border-border/20">
+              <div className="text-center p-4 bg-card rounded-lg border border-border/20 hover-lift">
                 <div className="text-3xl font-bold text-primary mb-2">170+</div>
                 <div className="text-sm text-muted-foreground">Million Sq. Ft. Underway</div>
               </div>
@@ -60,15 +60,15 @@ const About = () => {
           </div>
 
           {/* Values Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-slide-up">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-slide-up-fade">
             {values.map((value, index) => (
               <Card 
                 key={index}
-                className="group hover:shadow-card transition-all duration-500 hover:-translate-y-2 bg-gradient-card border-border/20 animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group hover:shadow-card transition-all duration-500 hover:-translate-y-2 bg-gradient-card border-border/20 animate-bounce-in hover-glow"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 hover-glow">
                     <value.icon className="text-primary-foreground" size={24} />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
@@ -84,9 +84,9 @@ const About = () => {
         </div>
 
         {/* Mission Statement */}
-        <div className="mt-20 text-center animate-fade-in">
-          <div className="max-w-4xl mx-auto p-8 bg-gradient-card border border-border/20 rounded-2xl">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+        <div className="mt-20 text-center animate-slide-up-fade">
+          <div className="max-w-4xl mx-auto p-8 bg-gradient-card border border-border/20 rounded-2xl hover-lift hover-glow group">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 group-hover:text-primary transition-colors duration-300">
               Our Mission
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -95,9 +95,9 @@ const About = () => {
               to building sustainable communities that stand the test of time."
             </p>
             <Link to="/founder">
-              <Button className="group">
+              <Button className="group hover-scale hover-glow">
                 Meet Our Founder
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform duration-500" />
               </Button>
             </Link>
           </div>

@@ -99,7 +99,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 animate-bounce-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Our <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Projects</span>
           </h2>
@@ -109,16 +109,16 @@ const Projects = () => {
         </div>
 
         {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up">
+        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up-fade">
           {filters.map((filter) => (
             <Button
               key={filter.id}
               variant={activeFilter === filter.id ? "default" : "outline"}
               onClick={() => setActiveFilter(filter.id)}
-              className={`transition-all duration-300 ${
+              className={`transition-all duration-500 hover-scale ${
                 activeFilter === filter.id 
-                  ? "bg-gradient-primary shadow-glow" 
-                  : "hover:border-primary/50"
+                  ? "bg-gradient-primary shadow-glow animate-pulse-glow" 
+                  : "hover:border-primary/50 hover:bg-primary/10"
               }`}
             >
               {filter.label}
@@ -131,20 +131,20 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <Card 
               key={project.id} 
-              className="group overflow-hidden bg-gradient-card border-border/20 hover:shadow-card transition-all duration-500 hover:-translate-y-2 animate-scale-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group overflow-hidden bg-gradient-card border-border/20 hover:shadow-card transition-all duration-700 hover:-translate-y-3 animate-bounce-in hover-glow"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-64 object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Button 
                       size="sm" 
-                      className="bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30"
+                      className="bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 hover-scale animate-bounce-in"
                     >
                       <Eye className="mr-2" size={16} />
                       View Details
@@ -198,8 +198,8 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12 animate-fade-in">
-          <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
+        <div className="text-center mt-12 animate-slide-up-fade">
+          <Button size="lg" className="bg-gradient-primary hover:shadow-glow hover-scale transition-all duration-500">
             View All Projects
           </Button>
         </div>
