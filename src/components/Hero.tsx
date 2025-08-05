@@ -1,7 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const Hero = () => {
+  const years = useCountUp({ end: 25, duration: 2500 });
+  const projects = useCountUp({ end: 30, duration: 2500 });
+  const delivered = useCountUp({ end: 180, duration: 2500 });
+  const underway = useCountUp({ end: 170, duration: 2500 });
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Background overlay */}
@@ -56,26 +62,26 @@ const Hero = () => {
           {/* Stats */}
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in" style={{ animationDelay: '0.9s' }}>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
-                25+
+              <div ref={years.ref} className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+                {years.count}+
               </div>
               <div className="text-white/70">Years of Excellence</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
-                30+
+              <div ref={projects.ref} className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+                {projects.count}+
               </div>
               <div className="text-white/70">Projects Completed</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
-                180+
+              <div ref={delivered.ref} className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+                {delivered.count}+
               </div>
               <div className="text-white/70">Mn. Sq. Ft. Delivered</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
-                170+
+              <div ref={underway.ref} className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+                {underway.count}+
               </div>
               <div className="text-white/70">Mn. Sq. Ft. Underway</div>
             </div>
