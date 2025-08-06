@@ -53,25 +53,25 @@ const Hero = () => {
           {/* Stats */}
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up-fade stagger-3">
             <div className="text-center group hover-lift">
-              <div ref={years.ref} className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
+              <div ref={years.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
                 {years.count}+
               </div>
               <div className="text-white/70 group-hover:text-white transition-colors duration-300">Years of Excellence</div>
             </div>
             <div className="text-center group hover-lift">
-              <div ref={projects.ref} className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
+              <div ref={projects.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
                 {projects.count}+
               </div>
               <div className="text-white/70 group-hover:text-white transition-colors duration-300">Projects Completed</div>
             </div>
             <div className="text-center group hover-lift">
-              <div ref={delivered.ref} className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
+              <div ref={delivered.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
                 {delivered.count}+
               </div>
               <div className="text-white/70 group-hover:text-white transition-colors duration-300">Mn. Sq. Ft. Delivered</div>
             </div>
             <div className="text-center group hover-lift">
-              <div ref={underway.ref} className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
+              <div ref={underway.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
                 {underway.count}+
               </div>
               <div className="text-white/70 group-hover:text-white transition-colors duration-300">Mn. Sq. Ft. Underway</div>
