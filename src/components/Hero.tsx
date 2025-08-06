@@ -10,6 +10,21 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-blue-900">
+      {/* YouTube Background Video */}
+      <div className="absolute inset-0 w-full h-full">
+        <iframe
+          src="https://www.youtube.com/embed/l6EzZafb1Pk?autoplay=1&mute=1&loop=1&playlist=l6EzZafb1Pk&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+          className="absolute inset-0 w-full h-full object-cover scale-110"
+          style={{ 
+            border: 'none',
+            pointerEvents: 'none'
+          }}
+          allow="autoplay; encrypted-media"
+        />
+        {/* Video overlay for content readability */}
+        <div className="absolute inset-0 bg-blue-900/60"></div>
+      </div>
+      
       {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-overlay"></div>
       
