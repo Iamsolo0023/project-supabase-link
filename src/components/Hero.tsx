@@ -26,7 +26,7 @@ const Hero = () => {
       </div>
       
 
-      <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 pt-20">
+      <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 pt-20 font-times">
         {/* Main content */}
         <div className="animate-bounce-in">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8">
