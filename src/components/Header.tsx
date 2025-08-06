@@ -24,9 +24,9 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/67699003-1802-46ef-b92e-8159d41b53dd.png" 
                 alt="Shridhar Developers Logo" 
-                className="w-12 h-12 object-contain animate-logo-entrance hover:animate-pulse-glow transition-all duration-500 hover:scale-110"
+                className="w-12 h-12 object-contain"
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300 animate-pulse"></div>
+              
             </div>
             <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
               Shridhar Developers
