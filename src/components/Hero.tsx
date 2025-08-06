@@ -13,14 +13,6 @@ const Hero = () => {
       {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-overlay"></div>
       
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        {/* Floating elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-primary rounded-full opacity-20 animate-float blur-xl"></div>
-        <div className="absolute bottom-32 right-16 w-32 h-32 bg-gradient-primary rounded-full opacity-10 animate-float blur-2xl" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 border-2 border-primary/30 rounded-full animate-spin-slow"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-12 h-12 border border-accent/40 rounded-lg animate-float" style={{ animationDelay: '2s' }}></div>
-      </div>
 
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
         {/* Main content */}
