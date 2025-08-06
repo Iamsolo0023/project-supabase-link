@@ -25,8 +25,8 @@ const Hero = () => {
         <div className="absolute inset-0 bg-blue-900/60"></div>
       </div>
       
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-gradient-overlay"></div>
+      {/* Background overlay - made more transparent for video visibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/20 to-blue-900/30"></div>
       
 
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 pt-20">
