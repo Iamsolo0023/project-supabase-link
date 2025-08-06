@@ -25,16 +25,13 @@ const Hero = () => {
         <div className="absolute inset-0 bg-blue-900/60"></div>
       </div>
       
-      {/* Background overlay - made more transparent for video visibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/20 to-blue-900/30"></div>
-      
 
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 pt-20">
         {/* Main content */}
         <div className="animate-bounce-in">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8">
             Building Dreams Into
-            <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-pulse-glow">
+            <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Reality
             </span>
           </h1>
@@ -48,7 +45,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20 animate-slide-up-fade stagger-2">
             <Button 
               size="lg" 
-              className="group bg-gradient-primary hover:shadow-glow hover:scale-105 transition-all duration-500 text-lg px-8 py-4 animate-bounce-in"
+              className="group bg-gradient-primary hover:scale-105 transition-all duration-500 text-lg px-8 py-4 animate-bounce-in"
               style={{ animationDelay: '0.6s' }}
             >
               Explore Projects
@@ -68,25 +65,25 @@ const Hero = () => {
           {/* Stats */}
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up-fade stagger-3">
             <div className="text-center group hover-lift">
-              <div ref={years.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
+              <div ref={years.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500">
                 {years.count}+
               </div>
               <div className="text-white/70 group-hover:text-white transition-colors duration-300">Years of Excellence</div>
             </div>
             <div className="text-center group hover-lift">
-              <div ref={projects.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
+              <div ref={projects.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500">
                 {projects.count}+
               </div>
               <div className="text-white/70 group-hover:text-white transition-colors duration-300">Projects Completed</div>
             </div>
             <div className="text-center group hover-lift">
-              <div ref={delivered.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
+              <div ref={delivered.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500">
                 {delivered.count}+
               </div>
               <div className="text-white/70 group-hover:text-white transition-colors duration-300">Mn. Sq. Ft. Delivered</div>
             </div>
             <div className="text-center group hover-lift">
-              <div ref={underway.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500 animate-pulse-glow">
+              <div ref={underway.ref} className="text-4xl md:text-5xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-500">
                 {underway.count}+
               </div>
               <div className="text-white/70 group-hover:text-white transition-colors duration-300">Mn. Sq. Ft. Underway</div>
